@@ -19,16 +19,21 @@ namespace TestBetman
             IWebDriver dr = (IWebDriver)dataRequired[0];
 
             string title = dr.Title;
-            Assert.AreEqual("CASHPOINT Partner Area", title);
-            Console.WriteLine(title);
+            try
+            {
+                Assert.AreEqual("Login", title);
+                Console.WriteLine("Title matched and it is: " + title);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Title has not matched and it appears as: " + e);
+            }
 
             ArrayList dataSend = new ArrayList();
             dataSend.Add(dr);
-
-            //   extent.EndTest(test);
-
             return dataSend;
         }
+
 
         public static ArrayList Login_Submission(ArrayList dataRequired)
         {
@@ -36,15 +41,18 @@ namespace TestBetman
 
             ArrayList dataSend = new ArrayList();
 
-            dr.FindElement(By.Id("username")).SendKeys("pitest1");
-            dr.FindElement(By.Id("password")).SendKeys("$Pitest#1");
-            IWebElement sw = dr.FindElement(By.Id("submit")); sw.Click();
+            try
+            {
+                dr.FindElement(By.Id("login-form"));
+                Console.WriteLine("The Login pop up is displayed.");
+            }
+            catch (NoSuchElementException f)
+            {
+                Console.WriteLine("The Login pop up is not displayed.");
+            }
 
-       
+
             dataSend.Add(dr);
-
-            //   extent.EndTest(test);
-
             return dataSend;
         }
     }

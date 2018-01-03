@@ -20,19 +20,19 @@ namespace TestBetman
         {
             dr = new ChromeDriver();
 
-            dr.Manage().Window.Maximize();
-            dr.Navigate().GoToUrl("https://pi.cashpoint.com/");
+        //  dr.Manage().Window.Maximize();
+            dr.Navigate().GoToUrl("http://172.17.3.13");
 
-            //    dr.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+        //  dr.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
 
-            TestClassSuite.TestSuite(dr); //call the TestSuite Class by calling object and passing public variables
+            TestClassSuite.TestSuite(dr);       //  Call the TestSuite Class by calling object and passing public variables
         }
 
 
-     /*   [OneTimeTearDown]
+        [OneTimeTearDown]
         public void EndReport()
         {
-            dr.Close();
-        }*/
+            dr.Close();                        //   Closing the Browser
+        }
     }
 }
