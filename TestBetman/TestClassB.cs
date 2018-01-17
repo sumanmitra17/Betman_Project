@@ -26,7 +26,7 @@ namespace TestBetman
 
             try
             {
-                Assert.AreEqual("Loginn", title);
+                Assert.AreEqual("Login", title);
                 Console.WriteLine("\n" + "Title matched and it is: " + title);
             }
             catch (Exception e)
