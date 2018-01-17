@@ -27,12 +27,12 @@ namespace TestBetman
             try
             {
                 Assert.AreEqual("Login", title);
-                Console.WriteLine("Title matched and it is: " + title);
+                Console.WriteLine("\n" + "Title matched and it is: " + title);
             }
             catch (Exception e)
             
             {
-                Console.WriteLine("Title has not matched and the error is: " + e);
+                Console.WriteLine("\n" + "Title has not matched and the error is: " + e);
             }
             
             ArrayList dataSend = new ArrayList();
