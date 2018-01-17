@@ -19,16 +19,22 @@ namespace TestBetman
             IWebDriver dr = (IWebDriver)dataRequired[0];
 
             string title = dr.Title;
+        /*    Assert.Multiple(() =>
+                {
+                    Assert.AreEqual("Logind", title);
+                });*/
+
             try
             {
                 Assert.AreEqual("Login", title);
                 Console.WriteLine("Title matched and it is: " + title);
             }
             catch (Exception e)
+            
             {
-                Console.WriteLine("Title has not matched and it appears as: " + e);
+                Console.WriteLine("Title has not matched and the error is: " + e);
             }
-
+            
             ArrayList dataSend = new ArrayList();
             dataSend.Add(dr);
             return dataSend;
@@ -40,17 +46,16 @@ namespace TestBetman
             IWebDriver dr = (IWebDriver)dataRequired[0];
 
             ArrayList dataSend = new ArrayList();
-
+            
             try
             {
-                dr.FindElement(By.Id("login-form"));
+                dr.FindElement(By.Id("login-formm"));
                 Console.WriteLine("The Login pop up is displayed.");
             }
-            catch (NoSuchElementException f)
+            catch (Exception f)
             {
-                Console.WriteLine("The Login pop up is not displayed.");
+                Console.WriteLine("\n" + "The Login pop up is not displayed and the error is: " + "\n" + f);
             }
-
 
             dataSend.Add(dr);
             return dataSend;
