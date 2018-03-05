@@ -29,10 +29,10 @@ namespace TestBetman
         }
 
 
-        [OneTimeTearDown]
+     /*   [OneTimeTearDown]
         public void EndReport()
         {
             dr.Close();                        //   Closing the Browser
-        }
+        }*/
     }
 }
