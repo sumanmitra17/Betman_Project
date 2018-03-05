@@ -20,10 +20,10 @@ namespace TestBetman
             IWebDriver dr = (IWebDriver)dataRequired[0];
 
             string title = dr.Title;
-        /*    Assert.Multiple(() =>
-                {
-                    Assert.AreEqual("Logind", title);
-                });*/
+        /*  Assert.Multiple(() =>
+              {
+                  Assert.AreEqual("Logind", title);
+              });*/
 
            // try
             {
