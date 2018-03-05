@@ -50,7 +50,7 @@ namespace TestBetman
 
             ArrayList dataSend = new ArrayList();
             dr.FindElement(By.Name("username")).SendKeys("_T_Admin");
-            dr.FindElement(By.Name("password")).SendKeys("#123$LordTest");
+          //  dr.FindElement(By.Name("password")).SendKeys("#123$LordTest");
             
           /*try
             {
