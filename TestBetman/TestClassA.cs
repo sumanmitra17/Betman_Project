@@ -26,6 +26,7 @@ namespace TestBetman
         //  dr.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
 
             TestClassSuite.TestSuite(dr);       //  Call the TestSuite Class by calling object and passing public variables
+
         }
 
 
