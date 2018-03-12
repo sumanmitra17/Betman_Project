@@ -18,7 +18,7 @@ namespace TestBetman
         [Test]
         public void setup()
         {
-            dr = new ChromeDriver();
+            dr = new ChromeDriver(@"E:\Suman\Softwares\Cell\Visual Studio\Driver");
 
         //  dr.Manage().Window.Maximize();
             dr.Navigate().GoToUrl("http://172.17.3.13");
@@ -26,8 +26,7 @@ namespace TestBetman
         //  dr.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
 
             TestClassSuite.TestSuite(dr);       //  Call the TestSuite Class by calling object and passing public variables
-
-            string str="";
+          //  String s = "";
         }
 
 

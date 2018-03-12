@@ -10,49 +10,43 @@ using System.Collections;
 
 namespace TestBetman
 {
-   
+
     [TestFixture]
     public class TestClassB
     {
-        [Test]
         public static ArrayList TitleChecking(ArrayList dataRequired)
         {
             IWebDriver dr = (IWebDriver)dataRequired[0];
 
             string title = dr.Title;
-        /*  Assert.Multiple(() =>
-              {
-                  Assert.AreEqual("Logind", title);
-              });*/
+            /*    Assert.Multiple(() =>
+                    {
+                        Assert.AreEqual("Logind", title);
+                    });*/
 
-           // try
+            try
             {
-                Assert.AreEqual("Loginyh", title);
+                Assert.AreEqual("Login", title);
                 Console.WriteLine("\n" + "Title matched and it is: " + title);
             }
-        //    catch (Exception e)
-            
+            catch (Exception e)
             {
-           //     Console.WriteLine("\n" + "Title has not matched and the error is: " + e);
-              //  Console.WriteLine("\n" + "Title has not matched and the error is: " + e.StackTrace);    
-              //  throw e;
+                Console.WriteLine("\n" + "Title has not matched and the error is: " + e);
             }
-            
+
             ArrayList dataSend = new ArrayList();
             dataSend.Add(dr);
             return dataSend;
         }
 
-        [Test]
+
         public static ArrayList Login_Submission(ArrayList dataRequired)
         {
             IWebDriver dr = (IWebDriver)dataRequired[0];
 
             ArrayList dataSend = new ArrayList();
-            dr.FindElement(By.Name("username")).SendKeys("_T_Admin");
-          //  dr.FindElement(By.Name("password")).SendKeys("#123$LordTest");
-            
-          /*try
+
+            try
             {
                 dr.FindElement(By.Id("login-formm"));
                 Console.WriteLine("The Login pop up is displayed.");
@@ -60,7 +54,8 @@ namespace TestBetman
             catch (Exception f)
             {
                 Console.WriteLine("\n" + "The Login pop up is not displayed and the error is: " + "\n" + f);
-            }*/
+            }
+            dr.FindElement(By.Name("username")).SendKeys("sdf");
 
             dataSend.Add(dr);
             return dataSend;
