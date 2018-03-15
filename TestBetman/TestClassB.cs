@@ -34,7 +34,7 @@ namespace TestBetman
                 Console.WriteLine("\n" + "Title has not matched and the error is: " + e);
             }*/
 
-            Assert.AreEqual("Loginn", title);
+            Assert.AreEqual("Login", title);
             Console.WriteLine("\n" + "Title matched and it is: " + title);
 
             ArrayList dataSend = new ArrayList();
